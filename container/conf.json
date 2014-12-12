@@ -1,0 +1,13 @@
+{
+    "conf":
+    {
+        "gui": 1,
+            "theme": "matrix",
+            "urls":
+            {
+                "url": "http://www.url1.com"
+            },
+            "clock_style": 24
+    }
+}
+

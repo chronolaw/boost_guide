@@ -1,0 +1,29 @@
+
+project : requirements
+        #<cxxflags>-Wunused
+        <cxxflags>-Wunused-parameter
+;
+
+unit-test noncopyable : noncopyable.cpp ;
+
+unit-test ignore_unused : ignore_unused.cpp ;
+
+unit-test optional : optional.cpp ;
+
+unit-test assing : assign.cpp ;
+
+unit-test swap : swap.cpp ;
+
+unit-test singleton : singleton.cpp ;
+
+unit-test tribool : tribool.cpp ;
+
+unit-test operators : operators.cpp ;
+
+unit-test exception : exception.cpp ;
+
+unit-test uuid : uuid.cpp ;
+
+unit-test config : config.cpp ;
+
+unit-test utility : utility.cpp ;

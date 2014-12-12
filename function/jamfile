@@ -1,0 +1,12 @@
+
+unit-test resultof : result_of.cpp ;
+
+unit-test ref : ref.cpp ;
+
+unit-test b : bind.cpp ;
+
+unit-test func1 : function1.cpp ;
+unit-test func2 : function2.cpp ;
+
+unit-test signals1 : signals1.cpp ;
+unit-test signals2 : signals2.cpp ;

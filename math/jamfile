@@ -1,0 +1,12 @@
+
+unit-test math_test : math_constants.cpp ;
+
+unit-test int_test : integer.cpp ;
+
+unit-test rational_test : rational.cpp ;
+
+unit-test ratio : ratio.cpp ;
+
+unit-test crc_test : crc.cpp ;
+
+unit-test randome_test : random.cpp ;

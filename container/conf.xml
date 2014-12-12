@@ -1,0 +1,13 @@
+<conf>
+    <!-- conf comment -->
+    <gui>1</gui>
+    <theme id="001">matrix</theme>
+    <urls>
+    <!-- urls comment -->
+    <url>http://www.url1.com</url>
+        <url>http://www.url2.com</url>
+        <url>http://www.url3.com</url>
+    </urls>
+    <clock_style name="local">24</clock_style>
+</conf>
+

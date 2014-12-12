@@ -1,0 +1,22 @@
+
+unit-test timer : timer.cpp ;
+
+unit-test progress_timer : progress_timer.cpp ;
+
+unit-test progress_display : progress_display.cpp ;
+
+unit-test date1 : date1.cpp
+                 /lib//boost_date_time
+                 ;
+
+unit-test date2 : date2.cpp
+                 /lib//boost_date_time
+                 ;
+
+unit-test posix_time : posix_time.cpp
+                 /lib//boost_date_time
+                 ;
+
+unit-test datetime : datetime.cpp
+                 /lib//boost_date_time
+                 ;

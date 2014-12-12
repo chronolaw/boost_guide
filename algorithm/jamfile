@@ -1,0 +1,10 @@
+
+unit-test for_test : foreach.cpp ;
+
+unit-test minmax_test : minmax.cpp ;
+
+unit-test minmax_ele_test : minmax_element.cpp ;
+
+unit-test clamp_test : clamp.cpp ;
+
+unit-test hex_test : hex.cpp ;

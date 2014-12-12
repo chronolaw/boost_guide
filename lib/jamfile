@@ -1,0 +1,22 @@
+
+
+lib z ;
+lib dl ;
+lib rt ;
+
+lib boost_date_time ;
+lib boost_system ;
+lib boost_program_options ;
+lib boost_context ;
+lib boost_atomic ;
+
+lib boost_unit_test_framework ;
+lib boost_test_exec_monitor ;
+
+lib boost_chrono : boost_system : <name>boost_chrono ;
+lib boost_timer : boost_chrono : <name>boost_timer ;
+lib boost_filesystem : boost_system : <name>boost_filesystem ;
+lib boost_thread : boost_chrono : <name>boost_thread ;
+
+lib boost_coroutine : boost_context boost_system : <name>boost_coroutine ;
+

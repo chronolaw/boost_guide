@@ -1,0 +1,16 @@
+
+unit-test scoped_ptr : scoped_ptr.cpp ;
+unit-test scoped_array : scoped_array.cpp ;
+
+unit-test shared_ptr1 : shared_ptr1.cpp ;
+unit-test shared_ptr2 : shared_ptr2.cpp ;
+
+unit-test shared_array : shared_array.cpp ;
+
+unit-test weak_ptr : weak_ptr.cpp ;
+
+unit-test intrusive_ptr : intrusive_ptr.cpp ;
+
+unit-test pool : pool.cpp
+                      #/lib//boost_thread
+                      ;

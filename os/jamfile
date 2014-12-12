@@ -1,0 +1,24 @@
+
+unit-test system : system.cpp 
+                   /lib//boost_system
+                   ;
+
+unit-test chrono : chrono.cpp
+                   #/lib//boost_chrono
+                   ;
+
+unit-test cpu_timer : cpu_timer.cpp
+                      /lib//boost_timer
+                      ;
+
+unit-test filesystem1 : filesystem1.cpp
+                      /lib//boost_filesystem
+                      ;
+
+unit-test filesystem2 : filesystem2.cpp
+                      /lib//boost_filesystem
+                      ;
+
+unit-test demopo : program_options.cpp
+                            /lib//boost_program_options
+                            ;

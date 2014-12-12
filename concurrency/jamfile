@@ -1,0 +1,70 @@
+
+unit-test atomic : atomic.cpp
+                    /lib//boost_atomic
+                    ;
+
+unit-test mutex : mutex.cpp
+                    /lib//boost_thread
+                    /lib//boost_atomic
+                    ;
+
+unit-test thread1 : thread1.cpp
+                    /lib//boost_thread
+                    #/lib//boost_atomic
+                    ;
+
+unit-test thread2 : thread2.cpp
+                    /lib//boost_thread
+                    ;
+
+exe signal_set : signal_set.cpp
+                  /lib//boost_chrono
+                  ;
+
+unit-test   timer : timer.cpp
+                /lib//boost_chrono
+                ;
+
+exe server1 : server1.cpp
+              /lib//boost_chrono
+              ;
+exe client1 : client1.cpp
+              /lib//boost_chrono
+              ;
+
+exe server2 : server2.cpp
+              /lib//boost_chrono
+              ;
+exe client2 : client2.cpp
+              /lib//boost_chrono
+              ;
+
+unit-test asio : asio.cpp
+              /lib//boost_chrono
+              ;
+
+exe stream_server : stream_server.cpp
+              /lib//boost_chrono
+              ;
+exe stream_client : stream_client.cpp
+              /lib//boost_chrono
+              ;
+
+exe udp_server : udp_server.cpp
+              /lib//boost_chrono
+              ;
+exe udp_client : udp_client.cpp
+              /lib//boost_chrono
+              ;
+
+exe descriptor : descriptor.cpp
+              /lib//boost_chrono
+              /lib//boost_coroutine
+              /lib//boost_thread
+              ;
+
+exe coroutine : coroutine.cpp
+              /lib//boost_chrono
+              /lib//boost_coroutine
+              /lib//boost_thread
+              ;

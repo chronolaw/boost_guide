@@ -1,0 +1,12 @@
+
+unit-test lexical_cast : lexical_cast.cpp ;
+
+unit-test format : format.cpp ;
+
+unit-test string_ref : string_ref.cpp ;
+
+unit-test string_algo : string_algo.cpp ;
+
+unit-test tokenizer : tokenizer.cpp ;
+
+unit-test xpressive : xpressive.cpp ;

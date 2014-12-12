@@ -1,0 +1,22 @@
+
+unit-test assert_test : assert.cpp ;
+
+unit-test static_test : static_assert.cpp ;
+
+unit-test lightweight_test : lightweight_test.cpp ;
+
+unit-test minimal_test : minimal_test.cpp ;
+
+unit-test utf_test : utf_test.cpp
+                /lib//boost_unit_test_framework
+                #/lib//boost_test_exec_monitor
+                ;
+
+unit-test fixture_test :
+                fixture_main.cpp fixture_test.cpp
+                /lib//boost_unit_test_framework
+                ;
+
+unit-test em_test : execution_monitor.cpp
+                /lib//boost_test_exec_monitor
+                ;

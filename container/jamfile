@@ -1,0 +1,20 @@
+
+unit-test array : array.cpp ;
+
+unit-test dynamic_bitset : dynamic_bitset.cpp ;
+
+unit-test unordered : unordered.cpp ;
+
+unit-test bimap : bimap.cpp ;
+
+unit-test circular_buffer : circular_buffer.cpp ;
+
+unit-test tuple : tuple.cpp ;
+
+unit-test any : any.cpp ;
+
+unit-test variant : variant.cpp ;
+
+unit-test multi_array : multi_array.cpp ;
+
+unit-test property_tree : property_tree.cpp ;
