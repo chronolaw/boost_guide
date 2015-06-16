@@ -101,7 +101,7 @@ void case6()
     date d_end = d.end_of_month();
 
     for(day_iterator d_iter(d_start);
-        d_iter != d_end; ++d_iter)
+        d_iter <= d_end; ++d_iter)
     {
             cout << *d_iter << " " <<
                     d_iter->day_of_week()<< endl;
@@ -120,7 +120,7 @@ void case7()
 
     int count = 0;
     for (day_iterator d_iter(date(d18years.year(),11,1));
-            d_iter != d18years.end_of_month(); ++d_iter)
+            d_iter <= d18years.end_of_month(); ++d_iter)
     {
         if (d_iter->day_of_week() == Sunday)
         {
