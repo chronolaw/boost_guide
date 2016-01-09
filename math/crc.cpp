@@ -1,10 +1,12 @@
 // Copyright (c) 2015
 // Author: Chrono Law
-#include <std.hpp>
-using namespace std;
 
+#include <assign/std.hpp>
 #include <boost/crc.hpp>
 using namespace boost;
+
+#include <iostream>
+using namespace std;
 
 //////////////////////////////////////////
 
