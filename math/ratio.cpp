@@ -1,6 +1,7 @@
 // Copyright (c) 2015
 // Author: Chrono Law
-#include <std.hpp>
+#include <assign/std.hpp>
+#include <iostream>
 using namespace std;
 
 #define BOOST_RATIO_EXTENSIONS
