@@ -1,6 +1,8 @@
 // Copyright (c) 2015
 // Author: Chrono Law
-#include <std.hpp>
+#include <assign/std.hpp>
+#include <iostream>
+#include <cassert>
 using namespace std;
 
 #include <boost/algorithm/minmax_element.hpp>
@@ -24,14 +26,14 @@ void case2()
 
     decltype(v.begin()) pos;
     pos = boost::first_min_element(v.begin(),v.end());
-    assert(pos - v.begin() == 2);
+    assert( (pos - v.begin()) == 2 );
 
     pos = boost::last_min_element(v.begin(),v.end());
-    assert(pos - v.begin() == 3);
+    assert( (pos - v.begin()) == 3 );
 
     auto x = boost::first_min_last_max_element(v.begin(),v.end());
-    assert(x.first - v.begin() == 2 &&
-            x.second - v.begin() == 6);
+    assert( (x.first - v.begin()) == 2 &&
+            (x.second - v.begin()) == 6);
 
 }
 
@@ -39,4 +41,5 @@ int main()
 {
     case1();
     case2();
+    return 0;
 }
