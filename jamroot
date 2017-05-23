@@ -2,7 +2,7 @@
 import testing ;
 
 using gcc : : g++
-        : <cxxflags>-std=c++0x
+        : <cxxflags>-std=c++11
           <cxxflags>-fPIC
           <cxxflags>-Wno-multichar  #for boost::mpl
         ;
