@@ -98,14 +98,14 @@ public:
 void case4()
 {
     raw_shared x;
-    assert(!weak_from_raw(&x).use_count());
+    assert(weak_from_raw(&x).use_count() == 1);
     auto px = shared_from_raw(&x);
     assert(px.use_count() == 2);
 
     auto p = new raw_shared;
 
     auto wp = weak_from_raw(p);
-    assert(wp.use_count() == 0);
+    assert(wp.use_count() == 1);
 
     decltype(shared_from_raw(p)) spx(p);
 
