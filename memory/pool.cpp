@@ -5,8 +5,8 @@ using namespace std;
 
 #include <boost/core/ignore_unused.hpp>
 
-#define BOOST_SYSTEM_NO_DEPRECATED
-#define BOOST_POOL_NO_MT
+//#define BOOST_SYSTEM_NO_DEPRECATED
+//#define BOOST_POOL_NO_MT
 #include <boost/pool/pool.hpp>
 using namespace boost;
 
@@ -87,6 +87,7 @@ void case3()
 
 //////////////////////////////////////////
 
+#define BOOST_POOL_NO_MT
 #include <boost/pool/singleton_pool.hpp>
 
 struct pool_tag{};
