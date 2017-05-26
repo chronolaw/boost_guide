@@ -24,6 +24,7 @@ void case1()
 
 void case2()
 {
+#if 0
     rational<int> r(1.0);
     cout << r << endl;
 
@@ -32,6 +33,7 @@ void case2()
 
     r.assign(7.23, 100);
     cout << r << endl;
+#endif
 }
 
 //////////////////////////////////////////
