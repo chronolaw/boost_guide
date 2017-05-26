@@ -20,6 +20,12 @@ void case1()
 
     unhex(s, ostream_iterator<char>(cout));
     cout << endl;
+
+    hex("+-*/", ostream_iterator<char>(cout));
+    cout << endl;
+
+    hex_lower("+-*/", ostream_iterator<char>(cout));
+    cout << endl;
 }
 
 //////////////////////////////////////////
