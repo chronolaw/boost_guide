@@ -10,7 +10,7 @@ unit-test ignore_unused : ignore_unused.cpp ;
 
 unit-test optional : optional.cpp ;
 
-unit-test assing : assign.cpp ;
+unit-test assign : assign.cpp ;
 
 unit-test swap : swap.cpp ;
 

@@ -18,7 +18,7 @@ void case1()
     cout << endl;
 
     set<string> s;
-    s += "cpp", "java", "c#", "python";
+    s += "c", "cpp", "lua", "swift";
 
     for(auto& x : s)
         cout << x << ",";
