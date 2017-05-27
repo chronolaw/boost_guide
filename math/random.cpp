@@ -49,6 +49,7 @@ void case3()
     random::uniform_int_distribution<> ui(0, 255);
     for (int i = 0;i < 10;++i)
     {   std::cout << ui(rng) << ","; }
+    assert(ui.a() == 0 && ui.b() == 255);
     std::cout << std::endl;
 
     uniform_01<> u01;
