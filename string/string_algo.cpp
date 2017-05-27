@@ -32,7 +32,7 @@ void case1()
 //////////////////////////////////////////
 void case2()
 {
-    string str("I Don't Know.\n");
+    string str("FireEmblem Heroes\n");
     cout << to_upper_copy(str);
     cout << str;
     to_lower(str);
