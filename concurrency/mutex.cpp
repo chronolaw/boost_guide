@@ -3,7 +3,7 @@
 #include <std.hpp>
 using namespace std;
 
-#define BOOST_THREAD_VERSION 4
+#define BOOST_THREAD_VERSION 5
 #include <boost/ref.hpp>
 #include <boost/thread.hpp>
 using namespace boost;
@@ -115,7 +115,7 @@ void case3()
 class account final : public lockable_adapter<mutex>
 {
 private:
-    atomic<int> m_money{0};
+    boost::atomic<int> m_money{0};
 public:
     account() {}
     ~account() {}
