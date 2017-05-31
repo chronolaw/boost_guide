@@ -94,9 +94,9 @@ void case4()
 //////////////////////////////////////////
 void case5()
 {
-    ptime p(date(2014,6,8), hours(1));
-    ptime p1 = time_from_string("2014-6-8 01:00:00");
-    ptime p2 = from_iso_string("20140608T010000");
+    ptime p(date(2017,7,7), hours(1));
+    ptime p1 = time_from_string("2017-7-7 01:00:00");
+    ptime p2 = from_iso_string("20170707T010000");
 
     cout << p1 << endl << p2;
     {
@@ -127,7 +127,7 @@ void case6()
 
     cout << endl;
     {
-        ptime p(date(2014,2,14), hours(20));
+        ptime p(date(2017,2,14), hours(20));
         cout << to_simple_string(p) << endl;
         cout << to_iso_string(p) << endl;
         cout << to_iso_extended_string(p) << endl;
@@ -137,18 +137,20 @@ void case6()
 //////////////////////////////////////////
 void case7()
 {
-    ptime p(date(2010,2,14), hours(20));
+    ptime p(date(2017,5,20), hours(14));
     tm t = to_tm(p);
-    assert(t.tm_year == 110 && t.tm_hour == 20);
+    assert(t.tm_year == 117 && t.tm_hour == 14);
+    assert(ptime_from_tm(t) == p);
 
     ptime p2 = from_time_t(std::time(0));
     assert(p2.date() == day_clock::local_day());
+    cout << to_time_t(p2) << endl;
 }
 
 //////////////////////////////////////////
 void case8()
 {
-    ptime p(date(2014,1,1),hours(12)) ;
+    ptime p(date(2017,1,1),hours(12)) ;
     time_period tp1(p, hours(8));
     time_period tp2(p + hours(8), hours(1));
     assert(tp1.end() == tp2.begin() && tp1.is_adjacent(tp2));
@@ -165,7 +167,7 @@ void case8()
 //////////////////////////////////////////
 void case9()
 {
-    ptime p(date(2014,11,3),hours(10)) ;
+    ptime p(date(2017,5,31),hours(10)) ;
     for (time_iterator t_iter(p, minutes(10));
             t_iter < p + hours(1); ++ t_iter)
     {
