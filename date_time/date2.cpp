@@ -9,7 +9,7 @@ using namespace boost::gregorian;
 //////////////////////////////////////////
 void case1()
 {
-    date_period dp(date(2014,1,1), days(20));
+    date_period dp(date(2017,1,1), days(20));
 
     dp.shift(days(3));
     assert(dp.begin().day() == 4);
@@ -63,17 +63,17 @@ void case3()
 //////////////////////////////////////////
 void case4()
 {
-    date d(2006,11,26);
+    date d(2007,9,28);
     day_iterator d_iter(d);
 
     assert(d_iter == d);
     ++d_iter;
-    assert(d_iter == date(2006,11,27));
+    assert(d_iter == date(2007,9,29));
 
-    year_iterator y_iter(*d_iter, 8);
+    year_iterator y_iter(*d_iter, 10);
     assert(y_iter == d + days(1));
     ++y_iter;
-    assert(y_iter->year() == 2014);
+    assert(y_iter->year() == 2017);
 
     day_iterator iter(day_clock::local_day());
     ++iter;
@@ -86,16 +86,16 @@ void case4()
 void case5()
 {
     typedef gregorian_calendar gre_cal;
-    cout << "Y2014 is "
-        << (gre_cal::is_leap_year(2014)?"":"not")
+    cout << "Y2017 is "
+        << (gre_cal::is_leap_year(2017)?"":"not")
         << " a leap year." << endl;
-    assert(gre_cal::end_of_month_day(2014, 2) == 28);
+    assert(gre_cal::end_of_month_day(2017, 2) == 28);
 }
 
 //////////////////////////////////////////
 void case6()
 {
-    date d(2008,11,20);
+    date d(2017,1,23);
 
     date d_start(d.year(), d.month(), 1);
     date d_end = d.end_of_month();
@@ -112,14 +112,14 @@ void case6()
 //////////////////////////////////////////
 void case7()
 {
-    date d(2008,11,20);
+    date d(2017,1,23);
 
     date d18years = d + years(18);
     cout << d18years << " is "
         << d18years.day_of_week()<< endl;
 
     int count = 0;
-    for (day_iterator d_iter(date(d18years.year(),11,1));
+    for (day_iterator d_iter(date(d18years.year(),1,1));
             d_iter <= d18years.end_of_month(); ++d_iter)
     {
         if (d_iter->day_of_week() == Sunday)

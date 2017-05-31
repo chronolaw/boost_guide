@@ -3,6 +3,7 @@
 #include <std.hpp>
 using namespace std;
 
+//#define DATE_TIME_NO_DEFAULT_CONSTRUCTOR
 #include <boost/date_time/gregorian/gregorian.hpp>
 using namespace boost::gregorian;
 
@@ -50,7 +51,7 @@ void case3()
     {
         //date d1(1399,12,1);
         //date d2(10000,1,1);
-        date d3(2010,2,29);
+        date d3(2017,2,29);
     }
     catch(std::exception& e)
     {
@@ -61,30 +62,30 @@ void case3()
 //////////////////////////////////////////
 void case4()
 {
-    date d(2014,4,1);
-    assert(d.year()  == 2014);
-    assert(d.month() == 4);
+    date d(2017,6,1);
+    assert(d.year()  == 2017);
+    assert(d.month() == 6);
     assert(d.day()   == 1);
 
     date::ymd_type ymd =  d.year_month_day();
-    assert(ymd.year    == 2014);
-    assert(ymd.month   == 4);
+    assert(ymd.year    == 2017);
+    assert(ymd.month   == 6);
     assert(ymd.day     == 1);
 
     cout << d.day_of_week() << endl;
     cout << d.day_of_year() << endl;
-    assert(d.end_of_month() == date(2014,4,30));
+    assert(d.end_of_month() == date(2017,6,30));
 
-    cout << date(2014,1,10).week_number() << endl;
-    cout << date(2014,1,1).week_number()  << endl;
-    cout << date(2015,1,1).week_number()  << endl;
+    cout << date(2015,1,10).week_number() << endl;
+    cout << date(2016,1,10).week_number()  << endl;
+    cout << date(2017,1,10).week_number()  << endl;
 
     assert(date(pos_infin).is_infinity()  );
     assert(date(pos_infin).is_pos_infinity() );
     assert(date(neg_infin).is_neg_infinity() );
     assert(date(not_a_date_time).is_not_a_date() );
     assert(date(not_a_date_time).is_special() );
-    assert(!date(2014,11,1).is_special() );
+    assert(!date(2017,5,31).is_special() );
 
 
 }
@@ -92,7 +93,7 @@ void case4()
 //////////////////////////////////////////
 void case5()
 {
-    date d(2008,11,20);
+    date d(2017,1,23);
 
     cout << to_simple_string(d) << endl;
     cout << to_iso_string(d) << endl;
@@ -108,10 +109,10 @@ void case5()
 //////////////////////////////////////////
 void case6()
 {
-    date d(2014,2,1);
+    date d(2017,5,20);
     tm t = to_tm(d);
     assert(t.tm_hour == 0 && t.tm_min == 0);
-    assert(t.tm_year == 114 && t.tm_mday == 1);
+    assert(t.tm_year == 117 && t.tm_mday == 20);
 
     date d2 = date_from_tm(t);
     assert(d == d2);
@@ -143,7 +144,7 @@ void case7()
 //////////////////////////////////////////
 void case8()
 {
-    date d1(2000,1,1),d2(2014,11,18);
+    date d1(2000,1,1),d2(2017,11,18);
     cout << d2 - d1 << endl;
     assert(d1 + (d2 - d1) == d2);
 
@@ -155,10 +156,10 @@ void case8()
     assert(d1.day() == 4);
 
     d2 -= years(10);
-    assert(d2.year() == d1.year() + 4);
+    assert(d2.year() == d1.year() + 7);
 
     {
-        date d1(2014,1,1);
+        date d1(2017,1,1);
 
         date d2 = d1 + days(pos_infin);
         assert(d2.is_pos_infinity());
@@ -171,7 +172,7 @@ void case8()
     }
 
     {
-        date d(2014,3,30);
+        date d(2017,3,30);
         d -= months(1);
         d -= months(1);
         d += months(2);
@@ -182,11 +183,11 @@ void case8()
 //////////////////////////////////////////
 void case9()
 {
-    date_period dp1(date(2014,1,1), days(20));
-    date_period dp2(date(2014,1,1), date(2013,1,1));
-    date_period dp3(date(2014,3,1), days(-20));
+    date_period dp1(date(2017,1,1), days(20));
+    date_period dp2(date(2017,1,1), date(2016,1,1));
+    date_period dp3(date(2017,3,1), days(-20));
 
-    date_period dp(date(2014,1,1), days(20));
+    date_period dp(date(2017,1,1), days(20));
 
     assert(!dp.is_null());
     assert(dp.begin().day() == 1);
@@ -195,8 +196,8 @@ void case9()
     assert(dp.length().days() == 20);
 
     {
-        date_period dp1(date(2014,1,1), days(20));
-        date_period dp2(date(2014,2,19), days(10));
+        date_period dp1(date(2017,1,1), days(20));
+        date_period dp2(date(2017,2,19), days(10));
 
         cout << dp1;                        //[2010-Jan-01/2010-Jan-20]
         assert(dp1 < dp2);
