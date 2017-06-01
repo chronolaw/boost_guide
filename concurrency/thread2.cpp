@@ -219,7 +219,7 @@ void case5()
 //////////////////////////////////////////
 void case6()
 {
-    atomic<int> x;
+    boost::atomic<int> x;
     barrier br(5);
 
     auto func = [&](){
