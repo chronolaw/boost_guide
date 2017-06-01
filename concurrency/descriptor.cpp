@@ -3,6 +3,8 @@
 #include <std.hpp>
 using namespace std;
 
+#define BOOST_COROUTINES_NO_DEPRECATION_WARNING
+
 #include <boost/function.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/spawn.hpp>
