@@ -12,7 +12,6 @@ using namespace std;
 #include <boost/bimap/unconstrained_set_of.hpp>
 using namespace boost;
 
-#if 0
 //////////////////////////////////////////
 void case1()
 {
@@ -107,7 +106,6 @@ void case3()
 
     print_map(bm.by<name>());
 }
-#endif
 
 //////////////////////////////////////////
 #include <boost/assign.hpp>
@@ -191,9 +189,9 @@ void case7()
 
 int main()
 {
-    //case1();
-    //case2();
-    //case3();
+    case1();
+    case2();
+    case3();
     case4();
     case5();
     case6();
