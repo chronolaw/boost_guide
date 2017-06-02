@@ -15,6 +15,7 @@ int main()
 
     BOOST_TEST(*p == 10);
     BOOST_TEST(p.unique());
+    BOOST_TEST_NOT(!p);
 
     BOOST_TEST_EQ(p.use_count(), 1);
     BOOST_TEST_NE(*p, 20);
