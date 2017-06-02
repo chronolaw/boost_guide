@@ -139,6 +139,8 @@ void case5()
     to_string(db, str);
     cout << str << endl;
 
+    dump_to_string(db , str);
+    cout << str << endl;
 }
 
 //////////////////////////////////////////
@@ -183,6 +185,7 @@ void func(int n)
         }
     }
 
+    cout << dec ;
     for (dynamic_bitset<>::size_type i = db.find_next(2);
             i != dynamic_bitset<>::npos ;
             i = db.find_next(i) )
