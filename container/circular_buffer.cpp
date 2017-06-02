@@ -73,6 +73,7 @@ void case3()
 
     int *p = cb.linearize();
     assert(p[0]== 1 && p[3] == 4);
+    assert(cb.is_linearized());
 
     cb.rotate(cb.begin()+ 2);
     print(cb);
