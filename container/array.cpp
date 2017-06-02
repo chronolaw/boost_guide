@@ -45,7 +45,7 @@ void case2()
     using namespace boost::assign;
     array<int, 3> arr(list_of(2)(4)(6)) ;
 
-    for (int i = 0;i< arr.size() ;++i)
+    for (auto i = 0u;i< arr.size() ;++i)
     {   std::cout << arr[i] << ",";}
 
 }
