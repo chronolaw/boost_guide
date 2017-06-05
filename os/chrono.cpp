@@ -107,6 +107,7 @@ void case4()
 
         auto d = tp.time_since_epoch();
         cout << round<minutes>(d) << endl;
+        cout << round<hours>(d) << endl;
     }
 }
 
