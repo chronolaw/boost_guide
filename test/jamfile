@@ -20,3 +20,7 @@ unit-test fixture_test :
 unit-test em_test : execution_monitor.cpp
                 /lib//boost_test_exec_monitor
                 ;
+
+unit-test decorator : decorator.cpp
+                /lib//boost_unit_test_framework
+                ;
