@@ -1,5 +1,5 @@
 #Boost Guide
-This is the sample code for Boost library Guide  zxm.
+This is the sample code for Boost library Guide  zxm guofan.
 
 ##Requirements
 * Linux or other UNIX like
