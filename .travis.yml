@@ -18,10 +18,10 @@ env:
 #before_install:
 
 install:
-  - wget -O boost_1_64_0.tar.gz https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz && tar -xzf boost_1_64_0.tar.gz
+  - wget -O boost_${BOOST_VERSION}.tar.gz https://dl.bintray.com/boostorg/release/1.64.0/source/boost_${BOOST_VERSION}.tar.gz && tar -xzf boost_${BOOST_VERSION}.tar.gz
 
 script:
-  - cd boost_1_64_0
+  - cd boost_${BOOST_VERSION}
   - ./bootstrap.sh --without-libraries=graph,locale,regex,serialization,wave,mpi
   - sudo ./b2 link=static -j2 install > build.log 2>&1 || (cat build.log && exit 1)
   - cd ./tools/build

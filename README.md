@@ -1,6 +1,8 @@
 # Boost Guide
 This is the sample code for Boost library Guide.
 
+[![Build Status](https://travis-ci.org/chronolaw/boost_guide.svg?branch=master)](https://travis-ci.org/chronolaw/boost_guide)
+
 ## Requirements
 * Linux or other UNIX like
 * C++11(gcc 4.6 or later)
