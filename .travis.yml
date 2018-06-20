@@ -1,0 +1,31 @@
+sudo: required
+dist: trusty
+
+os: linux
+
+language: cpp
+
+compiler:
+  - gcc
+  - clang
+
+cache: ccache
+
+env:
+  global:
+    - BOOST_VERSION=1_64_0
+
+#before_install:
+
+install:
+  - wget -O boost_1_64_0.tar.gz https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz && tar -xzf boost_1_64_0.tar.gz
+
+script:
+  - cd boost_1_64_0
+  - ./bootstrap.sh --without-libraries=graph,locale,regex,serialization,wave,mpi
+  - sudo ./b2 link=static -j2 install > build.log 2>&1 || (cat build.log && exit 1)
+  - cd ./tools/build
+  - ./bootstrap.sh
+  - sudo ./b2 install > build.log 2>&1 || (cat build.log && exit 1)
+  - cd ..
+  - ./go
