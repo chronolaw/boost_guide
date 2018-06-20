@@ -148,6 +148,9 @@ void case7()
     cout << initial_path() << endl;
     cout << current_path() << endl;
 
+    // generate a temp file for test
+    std::ofstream("./test.txt") << "abcd" << std::endl;
+
     //path p("/usr/local/include/boost/version.hpp");
     path p("./test.txt");
     cout << file_size(p) << endl;

@@ -142,6 +142,10 @@ void case4()
     newfs::ifstream ifs(p);
     assert(ifs.is_open());
     cout << ifs.rdbuf();
+
+    // remove file
+    ifs.close();
+    remove(p);
 }
 
 
