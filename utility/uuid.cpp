@@ -163,7 +163,12 @@ void case6()
 }
 
 //////////////////////////////////////////
+#include <boost/version.hpp>
+#if BOOST_VERSION <= 106400
 #include <boost/uuid/sha1.hpp>
+#else
+#include <boost/uuid/detail/sha1.hpp>
+#endif
 using namespace boost::uuids::detail;
 
 void case7()

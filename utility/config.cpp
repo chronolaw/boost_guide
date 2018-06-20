@@ -4,7 +4,14 @@
 using namespace std;
 
 #include <boost/core/ignore_unused.hpp>
+
+#include <boost/version.hpp>
+#if BOOST_VERSION <= 106400
 #include <boost/config/suffix.hpp>
+#else
+#include <boost/config/detail/suffix.hpp>
+#endif
+
 using namespace boost;
 
 //////////////////////////////////////////
