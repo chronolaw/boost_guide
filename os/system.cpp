@@ -1,7 +1,10 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
 
 #include <boost/system/error_code.hpp>
 #include <boost/system/system_error.hpp>

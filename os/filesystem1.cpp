@@ -155,6 +155,7 @@ void case7()
     time_t t = last_write_time(p);
     last_write_time(p, time(0));
 
+    (void)t;
 }
 
 //////////////////////////////////////////
