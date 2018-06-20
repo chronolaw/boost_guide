@@ -27,5 +27,5 @@ script:
   - cd ./tools/build
   - ./bootstrap.sh
   - sudo ./b2 install > build.log 2>&1 || (cat build.log && exit 1)
-  - cd ..
+  - cd ../../..
   - ./go
