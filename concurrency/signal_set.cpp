@@ -1,7 +1,9 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::cout;
+using std::endl;
 
 #define BOOST_ASIO_DISABLE_STD_CHRONO
 #define BOOST_ASIO_ENABLE_HANDLER_TRACKING
@@ -9,6 +11,7 @@ using namespace std;
 #include <boost/asio.hpp>
 using namespace boost::asio;
 using namespace boost::system;
+using boost::function;
 
 // kill -10 xxxx
 

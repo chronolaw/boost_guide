@@ -1,7 +1,7 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
 
 #define BOOST_ASIO_DISABLE_STD_CHRONO
 //#define BOOST_ASIO_ENABLE_HANDLER_TRACKING

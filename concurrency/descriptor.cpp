@@ -1,7 +1,10 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::cout;
+using std::endl;
+using std::vector;
 
 #define BOOST_COROUTINES_NO_DEPRECATION_WARNING
 
