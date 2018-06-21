@@ -14,7 +14,7 @@ unit-test assign : assign.cpp ;
 
 unit-test swap : swap.cpp ;
 
-unit-test singleton : singleton.cpp ;
+#unit-test singleton : singleton.cpp ;
 
 unit-test tribool : tribool.cpp ;
 

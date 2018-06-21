@@ -24,7 +24,7 @@ install:
 
 script:
   - cd boost_${BOOST_VERSION}
-  - ./bootstrap.sh --without-libraries=graph,locale,regex,wave,mpi
+  - ./bootstrap.sh --without-libraries=graph,locale,regex,serialization,wave,mpi
   - sudo ./b2 link=static -j2 install > build.log 2>&1 || (cat build.log && exit 1)
   - cd ./tools/build
   - ./bootstrap.sh
