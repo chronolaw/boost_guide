@@ -2,6 +2,7 @@
 This is the sample code for Boost library Guide.
 
 [![Build Status](https://travis-ci.org/chronolaw/boost_guide.svg?branch=master)](https://travis-ci.org/chronolaw/boost_guide)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/chronolaw/boost_guide.svg?columns=all)](https://waffle.io/chronolaw/boost_guide) 
 
 ## Requirements
 * Linux or other UNIX like
