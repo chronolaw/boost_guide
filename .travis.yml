@@ -19,6 +19,8 @@ env:
 
 install:
   - wget -O boost_${BOOST_VERSION}.tar.gz https://dl.bintray.com/boostorg/release/1.64.0/source/boost_${BOOST_VERSION}.tar.gz && tar -xzf boost_${BOOST_VERSION}.tar.gz
+  # for filesystem
+  - sudo adduser chrono
 
 script:
   - cd boost_${BOOST_VERSION}
