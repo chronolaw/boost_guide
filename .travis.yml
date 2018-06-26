@@ -3,6 +3,9 @@ dist: trusty
 
 os: linux
 
+notifications:
+  email: false
+
 language: cpp
 
 compiler:
