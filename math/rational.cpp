@@ -1,5 +1,6 @@
 // Copyright (c) 2015
 // Author: Chrono Law
+#include <cmath>
 #include <std.hpp>
 #include <type_traits>
 using namespace std;
