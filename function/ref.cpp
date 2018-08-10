@@ -1,5 +1,7 @@
 // Copyright (c) 2015
 // Author: Chrono Law
+#include <cmath>
+#include <functional>
 #include <std.hpp>
 //using namespace std;
 

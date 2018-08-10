@@ -10,6 +10,7 @@
 #include <set>
 #include <map>
 #include <algorithm>
+#include <numeric>
 //using namespace std;
 
 #endif  //_BOOST_GUIDE_STD_HPP
