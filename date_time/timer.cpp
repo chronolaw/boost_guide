@@ -3,6 +3,9 @@
 #include <std.hpp>
 using namespace std;
 
+// disable pragma warning
+#define BOOST_ALLOW_DEPRECATED_HEADERS
+
 #include <boost/timer.hpp>
 using namespace boost;
 
