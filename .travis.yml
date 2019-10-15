@@ -16,12 +16,13 @@ cache: ccache
 
 env:
   global:
-    - BOOST_VERSION=1_64_0
+    - BOOST_VERSION=1_71_0
+    - BOOST_DOT_VER=1.17.0
 
 #before_install:
 
 install:
-  - wget -O boost_${BOOST_VERSION}.tar.gz https://dl.bintray.com/boostorg/release/1.64.0/source/boost_${BOOST_VERSION}.tar.gz && tar -xzf boost_${BOOST_VERSION}.tar.gz
+  - wget -O boost_${BOOST_VERSION}.tar.gz https://dl.bintray.com/boostorg/release/${BOOST_DOT_VER}/source/boost_${BOOST_VERSION}.tar.gz && tar -xzf boost_${BOOST_VERSION}.tar.gz
   # for filesystem
   - sudo mkdir /home/chrono
 
