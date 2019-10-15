@@ -2,7 +2,11 @@
 // Author: Chrono Law
 #include <std.hpp>
 #include <stack>
-using namespace std;
+//using namespace std;
+using std::vector;
+using std::stack;
+using std::cout;
+using std::endl;
 
 //#define BOOST_THREAD_PROVIDES_VARIADIC_THREAD
 //#define BOOST_THREAD_PROVIDES_FUTURE
