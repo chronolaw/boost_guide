@@ -4,6 +4,10 @@
 using namespace std;
 
 #include <boost/format.hpp>
+
+// disable pragma warning
+#define BOOST_ALLOW_DEPRECATED_HEADERS
+
 #include <boost/test/minimal.hpp>
 
 int test_main( int argc, char* argv[] )
