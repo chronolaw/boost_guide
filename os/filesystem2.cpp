@@ -1,7 +1,11 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
 
 #include <boost/optional.hpp>
 #include <boost/utility/string_ref.hpp>
@@ -88,6 +92,10 @@ void case2()
 }
 
 //////////////////////////////////////////
+
+// disable pragma warning
+#define BOOST_ALLOW_DEPRECATED_HEADERS
+
 #include <boost/progress.hpp>
 
 size_t copy_files(const path& from_dir, const path& to_dir ,
