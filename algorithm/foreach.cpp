@@ -24,6 +24,7 @@ void case1()
     {
         cout << c << "-";
     }
+    cout << endl;
 
     set<int> s = list_of(10)(20)(30);
 
@@ -80,7 +81,7 @@ void case3()
     cout << endl;
 
     pair<decltype(ar.begin()), decltype(ar.end())>
-        rng(ar.begin(), ar.end() -2);
+        rng(ar.begin(), ar.end() - 2);
     foreach(auto x, rng)
         cout << x << " ";
     cout << endl;
