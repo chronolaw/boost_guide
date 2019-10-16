@@ -2,6 +2,7 @@
 // Author: Chrono Law
 #include <cmath>
 #include <std.hpp>
+#include <typeinfo>
 using namespace std;
 
 #include <boost/utility/result_of.hpp>

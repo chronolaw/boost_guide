@@ -1,7 +1,10 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
 
 #include <boost/foreach.hpp>
 #include <boost/filesystem.hpp>
@@ -209,9 +212,11 @@ void case10()
     //directory_iterator end;
     //for (directory_iterator pos("/usr/local/lib/");pos != end; ++pos)
     //{       cout << *pos << endl;   }
+    string path = "/dev/shm";//"/tmp";
 
     typedef std::pair<directory_iterator, directory_iterator> dir_range;
-    dir_range dr(directory_iterator("/usr/local/lib/"),
+    //dir_range dr(directory_iterator("/usr/local/lib/"),
+    dir_range dr(directory_iterator(path.c_str()),
     directory_iterator());
 
     BOOST_FOREACH(auto& x , dr)
@@ -220,7 +225,7 @@ void case10()
     typedef recursive_directory_iterator rd_iterator;
 
     rd_iterator  end;
-    for (rd_iterator pos("/usr/local/lib/");pos != end; ++pos)
+    for (rd_iterator pos(path.c_str());pos != end; ++pos)
     {
         cout << "level" << pos.level() << ":" <<*pos << endl;
     }

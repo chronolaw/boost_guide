@@ -1,7 +1,9 @@
 // Copyright (c) 2015
 // Author: Chrono Law
 #include <std.hpp>
-using namespace std;
+//using namespace std;
+using std::cout;
+using std::endl;
 
 #define BOOST_THREAD_VERSION 5
 #include <boost/ref.hpp>

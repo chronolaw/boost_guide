@@ -30,10 +30,11 @@ milliseconds operator"" _ms(unsigned long long n)
     return milliseconds(n);
 }
 //////////////////////////////////////////
-void resolve_connect(ip::tcp::socket &sock,
+void resolve_connect(io_service &io, ip::tcp::socket &sock,
                     const char* name, int port)
 {
-    ip::tcp::resolver r(sock.get_io_service());
+    //ip::tcp::resolver r(sock.get_io_service());
+    ip::tcp::resolver r(io);
     ip::tcp::resolver::query q(name, boost::lexical_cast<string>(port));
 
     auto iter = r.resolve(q);
@@ -57,7 +58,7 @@ try
 {
     io_service io;
     ip::tcp::socket sock(io);
-    resolve_connect(sock,"www.boost.org", 80);
+    resolve_connect(io, sock,"www.boost.org", 80);
     cout << sock.remote_endpoint() << endl;
 
     //ios.run();

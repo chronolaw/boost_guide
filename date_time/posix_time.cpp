@@ -4,6 +4,7 @@
 using namespace std;
 
 //#define BOOST_DATE_TIME_POSIX_TIME_STD_CONFIG
+
 #include <boost/date_time/gregorian/gregorian.hpp>
 using namespace boost::gregorian;
 #include <boost/date_time/posix_time/posix_time.hpp>
@@ -38,8 +39,11 @@ void case2()
     time_duration td(1,10,30,1000);
     assert(td.hours() == 1 && td.minutes() == 10 && td.seconds() == 30);
     assert(td.total_seconds() == 1*3600+ 10*60 + 30);
+
+#ifndef BOOST_DATE_TIME_POSIX_TIME_STD_CONFIG
     assert(td.total_milliseconds() == td.total_seconds()*1000 + 1);
     assert(td.fractional_seconds() == 1000);
+#endif
 
     hours h(-10);
     assert(h.is_negative());

@@ -4,6 +4,9 @@
 #include <std.hpp>
 using namespace std;
 
+// disable pragma warning
+#define BOOST_ALLOW_DEPRECATED_HEADERS
+
 #include <boost/progress.hpp>
 using namespace boost;
 
