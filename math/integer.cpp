@@ -33,13 +33,15 @@ void case2()
     i32 = i16;
     um  = u8 + i16 + i32;
 
-    cout << "u8 :" << sizeof(u8) 
+    assert(sizeof(u8) == 1);
+
+    cout << "u8 :" << sizeof(u8)
         << " v = "<< (short)u8 << endl;
-    cout << "i16 :" << sizeof(i16) 
+    cout << "i16 :" << sizeof(i16)
         << " v = "<< i16 << endl;
-    cout << "i32 :" << sizeof(i32) 
+    cout << "i32 :" << sizeof(i32)
         << " v = "<< i32 << endl;
-    cout << "um :" << sizeof(um) 
+    cout << "um :" << sizeof(um)
         << " v = "<< um << endl;
 
     cout << (short)numeric_limits<int8_t>::max() << endl;
