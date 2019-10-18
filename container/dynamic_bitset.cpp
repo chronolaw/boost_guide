@@ -181,13 +181,13 @@ void func(int n)
     db.set();
     //cout << db.size() << endl;
 
-    for (dynamic_bitset<>::size_type i = db.find_next(1);
-            i != dynamic_bitset<>::npos ;
-            i = db.find_next(i ) )
+    for (auto i = db.find_next(1);
+         i != dynamic_bitset<>::npos ;
+         i = db.find_next(i ) )
     {
-        for (dynamic_bitset<>::size_type j = db.find_next(i);
-                j != dynamic_bitset<>::npos ;
-                j = db.find_next(j ))
+        for (auto j = db.find_next(i);
+             j != dynamic_bitset<>::npos ;
+             j = db.find_next(j ))
         {
             if ( j % i == 0)
             {
@@ -197,13 +197,14 @@ void func(int n)
     }
 
     cout << dec ;
-    for (dynamic_bitset<>::size_type i = db.find_next(2);
+    for (auto i = db.find_next(2);
             i != dynamic_bitset<>::npos ;
             i = db.find_next(i) )
     {
         cout << i << ", ";
     }
 
+    cout << endl;
 }
 
 void case7()
