@@ -125,16 +125,26 @@ void case4()
 //////////////////////////////////////////
 void case5()
 {
+    cout << dec;
+
     dynamic_bitset<> db(10, BOOST_BINARY(1010101));
     cout << db.to_ulong() << endl;      //85
+    assert(db.to_ulong() == 85);
 
     db.append(10);
     cout << db.to_ulong() << endl;
+    assert(db.to_ulong() == 10325);
 
-    // todo 171 fix
-    //db.push_back(1);
-    //cout << db.to_ulong() << endl;
+    db.push_back(1);
     //BOOST_TEST_THROWS(db.to_ulong(), std::overflow_error);
+    try
+    {
+        cout << db.to_ulong() << endl;
+    }
+    catch(std::overflow_error &)
+    {
+        cout << "can't convert to ulong."<< endl;
+    }
 
     string str;
     to_string(db, str);
