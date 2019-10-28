@@ -15,6 +15,7 @@ void case1()
 
     weak_ptr<int> wp(sp);
     assert(wp.use_count() == 1);
+    assert(!wp.empty());
 
     if (!wp.expired())
     {
