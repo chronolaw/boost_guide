@@ -227,7 +227,7 @@ void case10()
     rd_iterator  end;
     for (rd_iterator pos(path.c_str());pos != end; ++pos)
     {
-        cout << "level" << pos.level() << ":" <<*pos << endl;
+        cout << "depth" << pos.depth() << ":" <<*pos << endl;
     }
 
 
