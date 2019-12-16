@@ -146,6 +146,9 @@ namespace newfs = boost::filesystem;
 
 void case4()
 {
+    // generate a temp file for test
+    std::ofstream("./test.txt") << "abcd" << std::endl;
+
     path p("./test.txt");
     newfs::ifstream ifs(p);
     assert(ifs.is_open());
