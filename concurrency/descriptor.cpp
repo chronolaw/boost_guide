@@ -8,6 +8,9 @@ using std::vector;
 
 #define BOOST_COROUTINES_NO_DEPRECATION_WARNING
 
+#include <boost/range/begin.hpp>
+#include <boost/range/end.hpp>
+
 #include <boost/function.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/spawn.hpp>

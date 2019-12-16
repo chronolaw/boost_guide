@@ -10,6 +10,10 @@ using std::endl;
 
 #define BOOST_ASIO_DISABLE_STD_CHRONO
 //#define BOOST_ASIO_ENABLE_HANDLER_TRACKING
+
+#include <boost/range/begin.hpp>
+#include <boost/range/end.hpp>
+
 #include <boost/function.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/spawn.hpp>
