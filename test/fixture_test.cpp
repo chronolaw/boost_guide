@@ -15,7 +15,7 @@ struct global_fixture
     ~global_fixture(){cout << ("global teardown\n");}
 };
 
-BOOST_GLOBAL_FIXTURE(global_fixture);
+BOOST_TEST_GLOBAL_FIXTURE(global_fixture);
 
 struct assign_fixture
 {

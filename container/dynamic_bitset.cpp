@@ -125,16 +125,26 @@ void case4()
 //////////////////////////////////////////
 void case5()
 {
+    cout << dec;
+
     dynamic_bitset<> db(10, BOOST_BINARY(1010101));
     cout << db.to_ulong() << endl;      //85
+    assert(db.to_ulong() == 85);
 
     db.append(10);
     cout << db.to_ulong() << endl;
+    assert(db.to_ulong() == 10325);
 
-    // todo 171 fix
-    //db.push_back(1);
-    //cout << db.to_ulong() << endl;
+    db.push_back(1);
     //BOOST_TEST_THROWS(db.to_ulong(), std::overflow_error);
+    try
+    {
+        cout << db.to_ulong() << endl;
+    }
+    catch(std::overflow_error &)
+    {
+        cout << "can't convert to ulong."<< endl;
+    }
 
     string str;
     to_string(db, str);
@@ -171,13 +181,13 @@ void func(int n)
     db.set();
     //cout << db.size() << endl;
 
-    for (dynamic_bitset<>::size_type i = db.find_next(1);
-            i != dynamic_bitset<>::npos ;
-            i = db.find_next(i ) )
+    for (auto i = db.find_next(1);
+         i != dynamic_bitset<>::npos ;
+         i = db.find_next(i ) )
     {
-        for (dynamic_bitset<>::size_type j = db.find_next(i);
-                j != dynamic_bitset<>::npos ;
-                j = db.find_next(j ))
+        for (auto j = db.find_next(i);
+             j != dynamic_bitset<>::npos ;
+             j = db.find_next(j ))
         {
             if ( j % i == 0)
             {
@@ -187,13 +197,14 @@ void func(int n)
     }
 
     cout << dec ;
-    for (dynamic_bitset<>::size_type i = db.find_next(2);
+    for (auto i = db.find_next(2);
             i != dynamic_bitset<>::npos ;
             i = db.find_next(i) )
     {
         cout << i << ", ";
     }
 
+    cout << endl;
 }
 
 void case7()

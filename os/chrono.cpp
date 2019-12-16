@@ -5,7 +5,7 @@
 using std::cout;
 using std::endl;
 
-#define BOOST_ERROR_CODE_HEADER_ONLY
+//#define BOOST_ERROR_CODE_HEADER_ONLY
 #define BOOST_CHRONO_HEADER_ONLY
 #define BOOST_CHRONO_EXTENSIONS
 #include <boost/chrono.hpp>
