@@ -73,7 +73,7 @@ void case4()
     cout << pt.get<long>("conf.gui")<< endl;
     cout << pt.get("conf.no_prop", 100)<< endl; 
 
-    for (auto x : pt.get_child("conf.urls"))
+    for (auto& x : pt.get_child("conf.urls"))
     {   cout <<  x.second.data() << ",";    }
 
 }
