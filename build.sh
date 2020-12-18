@@ -1,4 +1,5 @@
 #!/bin/sh
+# copyright (c) 2020 by chrono
 
 ./bootstrap.sh
 
