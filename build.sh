@@ -13,4 +13,7 @@ sudo \
      --without-wave \
      --without-random \
      --without-mpi \
+     --without-math \
+     --without-graph \
+     --without-graph_parallel \
      install
